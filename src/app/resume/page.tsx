@@ -19,7 +19,7 @@ export default function Resume() {
             <h3 className="text-lg font-bold text-gray-900">Cybersecurity Analyst Co-op</h3>
             <div className="text-blue-600 font-medium mb-1">Lincoln Electric</div>
             <div className="text-sm text-gray-500 mb-4">May 2025 - August 2025</div>
-            <p className="text-gray-600">
+            <div className="text-gray-600">
               <ul>
                 <li>
                     Operationalize non-functional security requirements across multiple software development teams. I engaged 
@@ -35,7 +35,7 @@ export default function Resume() {
                     Headed a project to grow tribal knowledge capture using AI tools across the organization, improving workflows and productivity.
                 </li>
               </ul>
-            </p>
+            </div>
           </div>
 
           {/* JOB 2 */}
@@ -44,7 +44,7 @@ export default function Resume() {
             <h3 className="text-lg font-bold text-gray-900">Schaeffler Group</h3>
             <div className="text-blue-600 font-medium mb-1">Full Stack Software Engineering Co-op</div>
             <div className="text-sm text-gray-500 mb-4">January 2024 - May 2024, August 2024 - December 2024</div>
-            <p className="text-gray-600">
+            <div className="text-gray-600">
               <ul>
                 <li>
                     Developing full scale applications for internal customers.
@@ -59,7 +59,7 @@ export default function Resume() {
                     Streamlining business to customer communications organization wide.
                 </li>
               </ul>
-            </p>
+            </div>
           </div>
 
           {/* JOB 4 */}
@@ -68,7 +68,7 @@ export default function Resume() {
             <h3 className="text-lg font-bold text-gray-900">Midmark Corporation</h3>
             <div className="text-blue-600 font-medium mb-1">Software Developer Co-op</div>
             <div className="text-sm text-gray-500 mb-4">May 2023 - August 2023</div>
-            <p className="text-gray-600">
+            <div className="text-gray-600">
               <ul>
                 <li>
                      Developing software for a digital platform that can be used by customers, dealers, or technicians. 
@@ -80,7 +80,7 @@ export default function Resume() {
                     Supporting our customer portal using microfrontends in React.js. 
                 </li>
               </ul>
-            </p>
+            </div>
           </div>
 
           {/* JOB 5 */}
@@ -89,7 +89,7 @@ export default function Resume() {
             <h3 className="text-lg font-bold text-gray-900">Midmark Corporation</h3>
             <div className="text-blue-600 font-medium mb-1">Cybersecurity Engineering Co-op</div>
             <div className="text-sm text-gray-500 mb-4">August 2022 - December 2022</div>
-            <p className="text-gray-600">
+            <div className="text-gray-600">
               <ul>
                 <li>
                       Automating code coverage and API scanning tools for our developer teams to integrate into their sprints. 
@@ -101,7 +101,7 @@ export default function Resume() {
                     Maintaining a low level of potential threats for our company and managing the security of our internal and external employees.
                 </li>
               </ul>
-            </p>
+            </div>
           </div>
         </div>
       </section>
