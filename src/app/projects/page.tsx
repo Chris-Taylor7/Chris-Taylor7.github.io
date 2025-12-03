@@ -11,8 +11,8 @@ export default function Projects() {
     },
     {
       title: "Notes-MAUI",
-      description: "E-commerce platform with Stripe integration. Handles cart state management using Redux.",
-      tags: [".NET", ".NET MAUI", "HTML/CSS", "Mobile"],
+      description: "Note taking application written for mobile devices in .NET MAUI and SQL Express.",
+      tags: [".NET", ".NET MAUI", "SQL Express", "Mobile"],
       link: "https://github.com/Chris-Taylor7/Notes-MAUI",
       github: "https://github.com/Chris-Taylor7/Notes-MAUI",
     },
