@@ -71,13 +71,13 @@ export default function Projects() {
 
               <div className="flex items-center gap-4 mt-auto">
                 <a
-                  href={project.link}
+                  href={project.link} target="_blank"
                   className="flex items-center text-sm font-medium text-gray-900 hover:text-blue-600"
                 >
                   <ExternalLink size={16} className="mr-1" /> Live Demo
                 </a>
                 <a
-                  href={project.github}
+                  href={project.github} target="_blank"
                   className="flex items-center text-sm font-medium text-gray-900 hover:text-blue-600"
                 >
                   <Github size={16} className="mr-1" /> Source

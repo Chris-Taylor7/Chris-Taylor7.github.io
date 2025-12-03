@@ -80,7 +80,7 @@ export default function Home() {
                 <Linkedin size={24} />
               </a>
               <a
-                href="https://github.com/Chris-Taylor7"
+                href="https://github.com/Chris-Taylor7" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 text-gray-500 hover:text-black transition-colors"
@@ -88,19 +88,19 @@ export default function Home() {
                 <Github size={24} />
               </a>
               <a
-                href="mailto:chtaylor270@gmail.com"
+                href="mailto:chtaylor270@gmail.com" target="_blank"
                 className="p-3 text-gray-500 hover:text-red-500 transition-colors"
               >
                 <Mail size={24} />
               </a>
               <a 
-                href="https://www.instagram.com/christaylorisapunk/"
+                href="https://www.instagram.com/christaylorisapunk/" target="_blank"
                 className="p-3 text-gray-500 hover:text-pink-500 transition-colors"
               >
                 <Instagram size={24} />
               </a>
               <a 
-                href="https://www.discord.com/465965656270045184"
+                href="https://www.discord.com/465965656270045184" target="_blank"
                 className="p-3 text-gray-500 hover:text-blue-300 transition-colors"
               >
                 <i className="fas fa-discord fa-sm text-gray-500 hover:text-blue-300 transition-colors "></i>
