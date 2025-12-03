@@ -89,23 +89,23 @@ export default function Resume() {
           
           {/* Education 1 */}
           <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm transition-shadow hover:shadow-md">
-            <h3 className="text-lg font-bold text-gray-900">Master of Science in Computer Science</h3>
-            <div className="text-gray-600">Tech University</div>
-            <div className="text-sm text-gray-400 mt-1">2020 - 2022</div>
+            <h3 className="text-lg font-bold text-gray-900">Bachelors of Science in Cybersecurity</h3>
+            <div className="text-gray-600">University of Cincinnati</div>
+            <div className="text-sm text-gray-400 mt-1">August 2021 - May 2026</div>
           </div>
 
           {/* Education 2 */}
           <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm transition-shadow hover:shadow-md">
-            <h3 className="text-lg font-bold text-gray-900">Bachelor of Science in Information Technology</h3>
-            <div className="text-gray-600">State College</div>
-            <div className="text-sm text-gray-400 mt-1">2016 - 2020</div>
+            <h3 className="text-lg font-bold text-gray-900">Bachelor of Information Technology in Information Technology - Networking Systems</h3>
+            <div className="text-gray-600">University of Cincinnati</div>
+            <div className="text-sm text-gray-400 mt-1">August 2021 - May 2026</div>
           </div>
 
            {/* Education 3 */}
            <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm transition-shadow hover:shadow-md">
-            <h3 className="text-lg font-bold text-gray-900">Full Stack Web Development Bootcamp</h3>
-            <div className="text-gray-600">Coding Academy</div>
-            <div className="text-sm text-gray-400 mt-1">Summer 2018</div>
+            <h3 className="text-lg font-bold text-gray-900">High School Diploma</h3>
+            <div className="text-gray-600">New Philadelphia High School</div>
+            <div className="text-sm text-gray-400 mt-1">August 2018 - May 2021</div>
           </div>
 
         </div>

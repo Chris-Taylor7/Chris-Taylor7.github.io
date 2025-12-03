@@ -56,8 +56,9 @@ export default function Home() {
             {text}
             <span className="animate-pulse text-blue-600">|</span>
           </h1>
-          <p className="text-xl text-gray-600 max-w-lg">
-            I'm a software engineer passionate about building accessible, pixel-perfect user interfaces that blend design and function.
+          <p className="text-xl text-gray-800 max-w-lg">
+            I'm a cybersecurity professional and a software engineer passionate about building efficient solutions, while making 
+            them safe for all at the exact same time.
           </p>
           
           <div className="flex gap-4">
@@ -102,7 +103,7 @@ export default function Home() {
                 href="https://www.discord.com/465965656270045184"
                 className="p-3 text-gray-500 hover:text-blue-300 transition-colors"
               >
-                <i className="fas fa-discord fa-sm hover:text-blue-300 transition-colors "></i>
+                <i className="fas fa-discord fa-sm text-gray-500 hover:text-blue-300 transition-colors "></i>
               </a>
             </div>
           </div>
@@ -111,23 +112,39 @@ export default function Home() {
         {/* RIGHT COLUMN: Photo Placeholder */}
         <div className="order-1 md:order-2 flex justify-center md:justify-end">
           <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-gray-200 shadow-xl bg-gray-100 flex items-center justify-center">
-            {/* 
-               TODO: To add your real photo:
-               1. Save your photo as 'profile.jpg' in the 'public' folder.
-               2. Delete the <span> below.
-               3. Uncomment the <img /> tag below.
-            */}
-            <span className="text-gray-400 font-medium">Place Photo Here</span>
-            
-            {/* <img 
+           
+             <img 
               src="/profile.jpg" 
               alt="Chris Taylor" 
               className="object-cover w-full h-full"
-            /> */}
+            /> 
           </div>
         </div>
-
       </div>
+
+      <br />
+      
+      <div className="space-y-6 order-2 md:order-1">
+          <h1 className="text-5xl font-extrabold tracking-tight text-gray-900 sm:text-6xl min-h-[80px] pt-16">About Me</h1>
+          <p className="text-xl text-gray-800 max-w-lg">
+            Hello! My name is Christopher Taylor and I am a cybersecurity major from the University of Cincinnati. I am passionate 
+            about security, digital forensics, software development, and making the internet a kinder place to engage in. I am looking for any analyst or software engineer position, 
+            in any sector. 
+            <br /> <br />
+            Most recently, I was employed at Lincoln Electric pioneering DevSecOps across the organization. This comes in many forms, from operationalizing 
+            non-functional 
+            requirements to sitting down with developers to build customized security scanning pipelines. I enjoy meeting a lot of new people this way! Making the employees 
+            we work everyday with have easier lives for the 8 hours they are clocked in is my biggest passion. 
+            <br /> <br />
+            In my free time, I have served as the president of one of UC's satellite clubs of UC Esports, and I help run a charity called the 
+            Collegiate Esports Network, in which we organize events to raise money for various charities, including The Red Cross and A Kid Again! 
+            I look forward to hearing from you. Thanks for visiting!
+          </p>
+      </div>
+
     </div>
+
+    
+    
   );
 }
