@@ -127,7 +127,7 @@ export default function Home() {
       <div className="space-y-6 order-2 md:order-1">
           <h1 className="text-5xl font-extrabold tracking-tight text-gray-900 sm:text-6xl min-h-[80px] pt-16">About Me</h1>
           <p className="text-xl text-gray-800 max-w-lg">
-            Hello! My name is Christopher Taylor and I am a cybersecurity major from the University of Cincinnati. I am passionate 
+            Hello! My name is Christopher Taylor and I am a Cybersecurity and IT - Networking Systems double major from the University of Cincinnati. I am passionate 
             about security, digital forensics, software development, and making the internet a kinder place to engage in. I am looking for any analyst or software engineer position, 
             in any sector. 
             <br /> <br />
