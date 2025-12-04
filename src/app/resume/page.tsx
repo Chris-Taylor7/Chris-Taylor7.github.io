@@ -16,8 +16,8 @@ export default function Resume() {
           {/* JOB 1 */}
           <div className="relative">
             <span className="absolute -left-[41px] top-1 h-5 w-5 rounded-full border-4 border-white bg-blue-600"></span>
-            <h3 className="text-lg font-bold text-gray-900">Cybersecurity Analyst Co-op</h3>
-            <div className="text-blue-600 font-medium mb-1">Lincoln Electric</div>
+            <h3 className="text-lg font-bold text-gray-900">Lincoln Electric</h3>
+            <div className="text-blue-600 font-medium mb-1">Cybersecurity Analyst Co-op</div>
             <div className="text-sm text-gray-500 mb-4">May 2025 - August 2025</div>
             <div className="text-gray-600">
               <ul>
