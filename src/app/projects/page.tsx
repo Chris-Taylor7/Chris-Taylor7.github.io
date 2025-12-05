@@ -47,7 +47,7 @@ export default function Projects() {
           >
             {/* Placeholder for project image */}
             <div className="h-48 bg-gray-100 flex items-center justify-center text-gray-400">
-              [Project Screenshot]
+              [Photos coming soon!]
             </div>
             
             <div className="p-6 flex flex-col flex-grow">
