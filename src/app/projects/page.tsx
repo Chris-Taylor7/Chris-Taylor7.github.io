@@ -20,7 +20,7 @@ export default function Projects() {
       title: "Flutter Youtube Directory",
       description: "Directory of Flutter documentation on Youtube, built in Flutter for desktop and mobile.",
       tags: ["Flutter", "Google Cloud Platform", "DART"],
-      link: "https://github.com/Chris-Taylor7/Flutter-Youtube-directory",
+      link: "https://flutter-youtube-directory-k9bv1wqoz-chris-taylor7s-projects.vercel.app/",
       github: "https://github.com/Chris-Taylor7/Flutter-Youtube-directory",
     },
     {
