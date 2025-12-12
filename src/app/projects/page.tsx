@@ -5,16 +5,16 @@ export default function Projects() {
     {
       title: "SubletUC",
       description: "A student housing application built for UC students, by UC students. Meant to be portable to any university.",
-      tags: ["Razor Blazor", ".NET Framework", "HTML/CSS", "SQL"],
+      tags: ["Razor Blazor", ".NET Framework", "HTML/CSS", "SQL Server"],
       link: "https://www.subletuc.com/",
       github: "https://www.subletuc.com/",
     },
     {
-      title: "Notes-MAUI",
-      description: "Note taking application written for mobile devices in .NET MAUI and SQL Express.",
-      tags: [".NET", ".NET MAUI", "SQL Express", "Mobile"],
-      link: "https://github.com/Chris-Taylor7/Notes-MAUI",
-      github: "https://github.com/Chris-Taylor7/Notes-MAUI",
+      title: "SubletUC-React",
+      description: "Student housing application built for UC students, built using React.js and .NET 8!",
+      tags: [".NET", "React.js", "SQL Express", "Tailwind css"],
+      link: "https://sublet-uc-react-git-main-chris-taylor7s-projects.vercel.app/",
+      github: "https://github.com/Chris-Taylor7/SubletUC-React",
     },
     {
       title: "Flutter Youtube Directory",
