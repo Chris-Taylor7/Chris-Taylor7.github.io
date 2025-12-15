@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ExternalLink, Github } from "lucide-react";
 
 export default function Projects() {
@@ -7,7 +8,8 @@ export default function Projects() {
       description: "A student housing application built for UC students, by UC students. Meant to be portable to any university.",
       tags: ["Razor Blazor", ".NET Framework", "HTML/CSS", "SQL Server"],
       link: "https://www.subletuc.com/",
-      github: "https://www.subletuc.com/",
+      github: null,
+      photo: "/public/subletuc.png", 
     },
     {
       title: "SubletUC-React",
@@ -15,6 +17,7 @@ export default function Projects() {
       tags: [".NET", "React.js", "SQL Express", "Tailwind css"],
       link: "https://sublet-uc-react-git-main-chris-taylor7s-projects.vercel.app/",
       github: "https://github.com/Chris-Taylor7/SubletUC-React",
+      photo: "/public/subletuc-react.png",
     },
     {
       title: "Flutter Youtube Directory",
@@ -22,13 +25,31 @@ export default function Projects() {
       tags: ["Flutter", "Google Cloud Platform", "DART"],
       link: "https://flutter-youtube-directory-k9bv1wqoz-chris-taylor7s-projects.vercel.app/",
       github: "https://github.com/Chris-Taylor7/Flutter-Youtube-directory",
+      photo: "/public/flutter-directory.png",
     },
     {
       title: "Collegiate Esports Network",
       description: "Website for the non-profit I am a part of called the Collegiate Esports Network.",
       tags: ["Python", "Svelte.js", "Sveltekit"],
       link: "https://collegiateesportsnetwork.org/",
-      github: "https://collegiateesportsnetwork.org/",
+      github: null,
+      photo: "/public/cen.png",
+    },
+    {
+      title: "Notes-MAUI",
+      description: "Note taking application built in .NET MAUI with a SQL Express database",
+      tags: [".NET MAUI", "Mobile Development", "SQL Express"],
+      link: null,
+      github: "https://github.com/Chris-Taylor7/Notes-MAUI",
+      photo: "/public/Notes.png", 
+    },
+    {
+      title: "Login Component",
+      description: "Responsive Login component made in native HTML, CSS, and Javascript",
+      tags: ["HTML5", "CSS3", "Javascript"],
+      link: null,
+      github: "https://github.com/Chris-Taylor7/login",
+      photo: "/public/login.png",
     },
   ];
 
@@ -45,9 +66,19 @@ export default function Projects() {
             key={index}
             className="group flex flex-col bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-shadow duration-300"
           >
-            {/* Placeholder for project image */}
-            <div className="h-48 bg-gray-100 flex items-center justify-center text-gray-400">
-              [Photos coming soon!]
+            <div className="h-48 bg-gray-100 relative">
+              {project.photo ? (
+                <Image 
+                  src={project.photo} 
+                  alt={project.title}
+                  fill
+                  className="object-cover"
+                />
+              ) : (
+                <div className="h-full w-full flex items-center justify-center text-gray-400">
+                  [Photos coming soon!]
+                </div>
+              )}
             </div>
             
             <div className="p-6 flex flex-col flex-grow">
@@ -70,18 +101,26 @@ export default function Projects() {
               </div>
 
               <div className="flex items-center gap-4 mt-auto">
-                <a
-                  href={project.link} target="_blank"
-                  className="flex items-center text-sm font-medium text-gray-900 hover:text-blue-600"
-                >
-                  <ExternalLink size={16} className="mr-1" /> Live Demo
-                </a>
-                <a
-                  href={project.github} target="_blank"
-                  className="flex items-center text-sm font-medium text-gray-900 hover:text-blue-600"
-                >
-                  <Github size={16} className="mr-1" /> Source
-                </a>
+                {project.link && (
+                  <a
+                    href={project.link} 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center text-sm font-medium text-gray-900 hover:text-blue-600"
+                  >
+                    <ExternalLink size={16} className="mr-1" /> Live Demo
+                  </a>
+                )}
+                {project.github && (
+                  <a
+                    href={project.github} 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center text-sm font-medium text-gray-900 hover:text-blue-600"
+                  >
+                    <Github size={16} className="mr-1" /> Source
+                  </a>
+                )}
               </div>
             </div>
           </div>
