@@ -51,6 +51,14 @@ export default function Projects() {
       github: "https://github.com/Chris-Taylor7/login",
       photo: "/login.png",
     },
+    {
+      title: "Chris Taylor's Portfolio",
+      description: "Want to see how this site was made? Check out the code on GitHub!",
+      tags: ["NEXT.js", "Tailwindcss", "Vercel", "GitHub"],
+      link: "https://chris-taylor7.github.io/",
+      github: "https://github.com/Chris-Taylor7/Chris-Taylor7.github.io",
+      photo: "/github-logo.png",
+    }
   ];
 
   return (
@@ -76,7 +84,7 @@ export default function Projects() {
                 />
               ) : (
                 <div className="h-full w-full flex items-center justify-center text-gray-400">
-                  [Photos coming soon!]
+                  [Photo coming soon!]
                 </div>
               )}
             </div>
