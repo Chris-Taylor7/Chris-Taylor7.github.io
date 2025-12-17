@@ -9,7 +9,7 @@ export default function Projects() {
       tags: ["Razor Blazor", ".NET Framework", "HTML/CSS", "SQL Server"],
       link: "https://www.subletuc.com/",
       github: null,
-      photo: "/public/subletuc.png", 
+      photo: "/SUBLETUC_LOGO_FINAL.png", 
     },
     {
       title: "SubletUC-React",
@@ -17,7 +17,7 @@ export default function Projects() {
       tags: [".NET", "React.js", "SQL Express", "Tailwind css"],
       link: "https://sublet-uc-react-git-main-chris-taylor7s-projects.vercel.app/",
       github: "https://github.com/Chris-Taylor7/SubletUC-React",
-      photo: "/public/subletuc-react.png",
+      photo: "/SUBLETUC_LOGO_FINAL.png", 
     },
     {
       title: "Flutter Youtube Directory",
@@ -25,7 +25,7 @@ export default function Projects() {
       tags: ["Flutter", "Google Cloud Platform", "DART"],
       link: "https://flutter-youtube-directory-k9bv1wqoz-chris-taylor7s-projects.vercel.app/",
       github: "https://github.com/Chris-Taylor7/Flutter-Youtube-directory",
-      photo: "/public/flutter-directory.png",
+      photo: "/flutter.png",
     },
     {
       title: "Collegiate Esports Network",
@@ -33,7 +33,7 @@ export default function Projects() {
       tags: ["Python", "Svelte.js", "Sveltekit"],
       link: "https://collegiateesportsnetwork.org/",
       github: null,
-      photo: "/public/cen.png",
+      photo: "/CEN_Logo.webp",
     },
     {
       title: "Notes-MAUI",
@@ -41,7 +41,7 @@ export default function Projects() {
       tags: [".NET MAUI", "Mobile Development", "SQL Express"],
       link: null,
       github: "https://github.com/Chris-Taylor7/Notes-MAUI",
-      photo: "/public/Notes.png", 
+      photo: "/Maui.webp", 
     },
     {
       title: "Login Component",
@@ -49,7 +49,7 @@ export default function Projects() {
       tags: ["HTML5", "CSS3", "Javascript"],
       link: null,
       github: "https://github.com/Chris-Taylor7/login",
-      photo: "/public/login.png",
+      photo: "/login.png",
     },
   ];
 
