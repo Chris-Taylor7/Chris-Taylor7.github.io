@@ -12,6 +12,22 @@ export default function Projects() {
       photo: "/SUBLETUC_LOGO_FINAL.png", 
     },
     {
+      title: "AgileBoard.ai",
+      description: "A bug tracking app that helps prioritizes tasks, enabled using the Google Gemini AI API.",
+      tags: ["Angular.js", "Tailwindcss", "Vercel", "TypeScript", "Prisma"],
+      link: "https://bug-tracker-2lzlohlc4-chris-taylor7s-projects.vercel.app/",
+      github: "https://github.com/Chris-Taylor7/BugTracker",
+      photo: "/Agile.png",
+    },
+    {
+      title: "Collegiate Esports Network",
+      description: "Website for the non-profit I am a part of called the Collegiate Esports Network.",
+      tags: ["Python", "Svelte.js", "Sveltekit"],
+      link: "https://collegiateesportsnetwork.org/",
+      github: null,
+      photo: "/CEN_Logo.webp",
+    },
+    {
       title: "SubletUC-React",
       description: "Student housing application built for UC students, built using React.js and .NET 8!",
       tags: [".NET", "React.js", "SQL Express", "Tailwind css"],
@@ -26,14 +42,6 @@ export default function Projects() {
       link: "https://flutter-youtube-directory-k9bv1wqoz-chris-taylor7s-projects.vercel.app/",
       github: "https://github.com/Chris-Taylor7/Flutter-Youtube-directory",
       photo: "/flutter.png",
-    },
-    {
-      title: "Collegiate Esports Network",
-      description: "Website for the non-profit I am a part of called the Collegiate Esports Network.",
-      tags: ["Python", "Svelte.js", "Sveltekit"],
-      link: "https://collegiateesportsnetwork.org/",
-      github: null,
-      photo: "/CEN_Logo.webp",
     },
     {
       title: "Notes-MAUI",

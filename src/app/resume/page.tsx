@@ -104,6 +104,26 @@ export default function Resume() {
             </div>
           </div>
         </div>
+        {/* JOB 5 */}
+          <div className="relative">
+            <span className="absolute -left-[41px] top-1 h-5 w-5 rounded-full border-4 border-white bg-gray-300"></span>
+            <h3 className="text-lg font-bold text-gray-900">Staples Corporation</h3>
+            <div className="text-blue-600 font-medium mb-1">Sales and Technology Repair Associate</div>
+            <div className="text-sm text-gray-500 mb-4">May 2022 - August 2022</div>
+            <div className="text-gray-600">
+              <ul>
+                <li>
+                  Led sales for technology products and services, providing expert advice to customers and ensuring high levels of customer satisfaction.
+                </li>
+                <li>
+                    Set sales record for 2022 at the location.  
+                </li>
+                <li>
+                  Assisted in technology support and repair at the store's tech bar, diagnosing and fixing a variety of devices.
+                </li>
+              </ul>
+            </div>
+          </div>
       </section>
 
       {/* Education Section */}
