@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, Github, Instagram, Linkedin, Mail } from "lucide-react";
+import { ArrowRight, Github, Instagram, Linkedin, Mail, Download } from "lucide-react";
 import { useEffect, useState } from "react";
 
 export default function Home() {
@@ -14,30 +14,25 @@ export default function Home() {
 
     const startTyping = () => {
       let index = 0;
-      setText(""); // Clear text to start fresh
+      setText(""); 
 
-      // Type character by character every 100ms
       typeInterval = setInterval(() => {
         setText(fullText.slice(0, index + 1));
         index++;
         
-        // Stop typing when complete
         if (index === fullText.length) {
           clearInterval(typeInterval);
         }
       }, 100);
     };
 
-    // 1. Run immediately on mount
     startTyping();
 
-    // 2. Set up the loop to run every 5 seconds
     loopInterval = setInterval(() => {
-      clearInterval(typeInterval); // Safety clear
+      clearInterval(typeInterval); 
       startTyping();
     }, 5000);
 
-    // Cleanup on unmount
     return () => {
       clearInterval(typeInterval);
       clearInterval(loopInterval);
@@ -51,26 +46,35 @@ export default function Home() {
         
         {/* LEFT COLUMN: Text Content */}
         <div className="space-y-6 order-2 md:order-1">
-          {/* Min-height ensures the layout doesn't jump when text is empty */}
           <h1 className="text-5xl font-extrabold tracking-tight text-gray-900 sm:text-6xl min-h-[80px]">
             {text}
             <span className="animate-pulse text-blue-600">|</span>
           </h1>
+          <h1 className="text-3xl font-extrabold tracking-tight text-gray-700 sm:text-4xl min-h-[80px]">Let's build something amazing together.</h1>
           <p className="text-xl text-gray-800 max-w-lg">
             I'm a cybersecurity professional and a software engineer passionate about building efficient solutions, while making 
             them safe for all at the exact same time.
           </p>
           
-          <div className="flex gap-4">
+          <div className="flex flex-wrap gap-4">
             <Link
               href="/projects"
               className="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-white bg-gray-900 rounded-lg hover:bg-gray-800 transition-colors"
             >
               View My Work <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
+
+            {/* 2. NEW RESUME BUTTON */}
+            <a
+              href="/Taylor_Chris_Resume_2026.pdf"
+              download="Taylor_Chris_Resume.pdf" 
+              className="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-gray-900 bg-white border-2 border-gray-200 rounded-lg hover:bg-gray-50 hover:border-gray-300 transition-colors"
+            >
+              Resume <Download className="ml-2 h-4 w-4" />
+            </a>
             
             {/* Social Icons */}
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 ml-2">
               <a
                 href="https://www.linkedin.com/in/chris-taylor-737469212/"
                 target="_blank"
@@ -103,6 +107,7 @@ export default function Home() {
                 href="https://www.discord.com/465965656270045184" target="_blank"
                 className="p-3 text-gray-500 hover:text-blue-300 transition-colors"
               >
+                {/* Note: FontAwesome needs to be loaded separately, or use a Lucide icon if preferred */}
                 <i className="fas fa-discord fa-sm text-gray-500 hover:text-blue-300 transition-colors "></i>
               </a>
             </div>
@@ -112,7 +117,6 @@ export default function Home() {
         {/* RIGHT COLUMN: Photo Placeholder */}
         <div className="order-1 md:order-2 flex justify-center md:justify-end">
           <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-gray-200 shadow-xl bg-gray-100 flex items-center justify-center">
-           
              <img 
               src="/profile.jpg" 
               alt="Chris Taylor" 
@@ -143,8 +147,5 @@ export default function Home() {
       </div>
 
     </div>
-
-    
-    
   );
 }

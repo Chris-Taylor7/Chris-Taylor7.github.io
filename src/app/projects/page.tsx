@@ -10,6 +10,7 @@ export default function Projects() {
       link: "https://www.subletuc.com/",
       github: null,
       photo: "/SUBLETUC_LOGO_FINAL.png", 
+      fit: "contain"
     },
     {
       title: "AgileBoard.ai",
@@ -18,6 +19,7 @@ export default function Projects() {
       link: "https://bug-tracker-2lzlohlc4-chris-taylor7s-projects.vercel.app/",
       github: "https://github.com/Chris-Taylor7/BugTracker",
       photo: "/Agile.png",
+      fit: "contain"
     },
     {
       title: "Collegiate Esports Network",
@@ -26,6 +28,7 @@ export default function Projects() {
       link: "https://collegiateesportsnetwork.org/",
       github: null,
       photo: "/CEN_Logo.webp",
+      fit: "contain"
     },
     {
       title: "SubletUC-React",
@@ -34,6 +37,7 @@ export default function Projects() {
       link: "https://sublet-uc-react-git-main-chris-taylor7s-projects.vercel.app/",
       github: "https://github.com/Chris-Taylor7/SubletUC-React",
       photo: "/SUBLETUC_LOGO_FINAL.png", 
+      fit: "contain"
     },
     {
       title: "Flutter Youtube Directory",
@@ -42,6 +46,7 @@ export default function Projects() {
       link: "https://flutter-youtube-directory-k9bv1wqoz-chris-taylor7s-projects.vercel.app/",
       github: "https://github.com/Chris-Taylor7/Flutter-Youtube-directory",
       photo: "/flutter.png",
+      fit: "cover"
     },
     {
       title: "Notes-MAUI",
@@ -50,6 +55,7 @@ export default function Projects() {
       link: null,
       github: "https://github.com/Chris-Taylor7/Notes-MAUI",
       photo: "/Maui.webp", 
+      fit: "cover"
     },
     {
       title: "Login Component",
@@ -57,7 +63,8 @@ export default function Projects() {
       tags: ["HTML5", "CSS3", "Javascript"],
       link: null,
       github: "https://github.com/Chris-Taylor7/login",
-      photo: "/login.png",
+      photo: "/github-logo.png",
+      fit: "cover"
     },
     {
       title: "Chris Taylor's Portfolio",
@@ -66,6 +73,7 @@ export default function Projects() {
       link: "https://chris-taylor7.github.io/",
       github: "https://github.com/Chris-Taylor7/Chris-Taylor7.github.io",
       photo: "/github-logo.png",
+      fit: "cover"
     }
   ];
 
@@ -82,13 +90,13 @@ export default function Projects() {
             key={index}
             className="group flex flex-col bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-shadow duration-300"
           >
-            <div className="h-48 bg-gray-100 relative">
+            <div className="h-48 bg-white relative border-b border-gray-100">
               {project.photo ? (
                 <Image 
                   src={project.photo} 
                   alt={project.title}
                   fill
-                  className="object-cover"
+                  className={` ${project.fit === 'cover' ? 'object-cover' : 'object-contain'}`}
                 />
               ) : (
                 <div className="h-full w-full flex items-center justify-center text-gray-400">
