@@ -57,11 +57,20 @@ export default function Home() {
           </p>
           
           <div className="flex flex-wrap gap-4">
+            {/* 1. VIEW MY WORK BUTTON */}
+            <Link
+              href="/resume"
+              className="inline-flex items-center justify-center px-5 py-3 text-base font-medium
+                         text-white bg-gray-800 rounded-lg hover:bg-gray-900 transition-colors"
+            >
+              View My Experience <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
             <Link
               href="/projects"
-              className="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-white bg-gray-900 rounded-lg hover:bg-gray-800 transition-colors"
+              className="inline-flex items-center justify-center px-5 py-3 text-base font-medium
+                        text-white bg-gray-600 rounded-lg hover:bg-gray-700 transition-colors"
             >
-              View My Work <ArrowRight className="ml-2 h-4 w-4" />
+              View My Projects <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
 
             {/* 2. NEW RESUME BUTTON */}
@@ -131,7 +140,7 @@ export default function Home() {
       <div className="space-y-6 order-2 md:order-1">
           <h1 className="text-5xl font-extrabold tracking-tight text-gray-900 sm:text-6xl min-h-[80px] pt-16">About Me</h1>
           <p className="text-xl text-gray-800 max-w-lg">
-            Hello! My name is Christopher Taylor and I am a Cybersecurity and IT - Networking Systems double major from the University of Cincinnati. I am passionate 
+            Hello! My name is Christopher Taylor and I am a Cybersecurity and IT - Networking Systems double major from the University of Cincinnati, graduating on May 2nd, 2026. I am passionate 
             about security, digital forensics, software development, and making the internet a kinder place to engage in. I am looking for any analyst or software engineer position, 
             in any sector. 
             <br /> <br />
