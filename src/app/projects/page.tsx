@@ -40,6 +40,15 @@ export default function Projects() {
       fit: "contain"
     },
     {
+      title: "CEN Discord Bot",
+      description: "Discord Bot using authentication for the non-profit I am a part of called the Collegiate Esports Network.",
+      tags: ["Python", "OauthV2", "Discord API"],
+      link: null,
+      github: "https://github.com/Collegiate-Esports-Network/CEN-Bot",
+      photo: "/CEN_Logo.webp",
+      fit: "contain"
+    },
+    {
       title: "Flutter Youtube Directory",
       description: "Directory of Flutter documentation on Youtube, built in Flutter for desktop and mobile.",
       tags: ["Flutter", "Google Cloud Platform", "DART"],
