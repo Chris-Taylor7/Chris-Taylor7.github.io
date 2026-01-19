@@ -1,8 +1,75 @@
 import Image from "next/image";
 import { ExternalLink, Github } from "lucide-react";
 
+// 1. Define the allowed keys to prevent typos and TS errors
+type ColorKey = 'red' | 'blue' | 'indigo' | 'teal' | 'violet' | 'sky' | 'orange' | 'slate';
+
+interface ProjectItem {
+  title: string;
+  description: string;
+  tags: string[];
+  link: string | null;
+  github: string | null;
+  photo: string;
+  fit: "contain" | "cover";
+  color: ColorKey; // This enforces that color must be one of the keys above
+}
+
 export default function Projects() {
-  const projects = [
+  // 2. Add 'border' to the object structure so 'theme.border' works below
+  const colorVariants: Record<ColorKey, { tag: string; title: string; link: string; border: string }> = {
+    red: {
+      tag: "bg-red-50 text-red-700 border-red-100",
+      title: "group-hover:text-red-600",
+      link: "hover:text-red-600",
+      border: "hover:border-red-200",
+    },
+    blue: {
+      tag: "bg-blue-50 text-blue-700 border-blue-100",
+      title: "group-hover:text-blue-600",
+      link: "hover:text-blue-600",
+      border: "hover:border-blue-200",
+    },
+    indigo: {
+      tag: "bg-indigo-50 text-indigo-700 border-indigo-100",
+      title: "group-hover:text-indigo-600",
+      link: "hover:text-indigo-600",
+      border: "hover:border-indigo-200",
+    },
+    teal: {
+      tag: "bg-teal-50 text-teal-700 border-teal-100",
+      title: "group-hover:text-teal-600",
+      link: "hover:text-teal-600",
+      border: "hover:border-teal-200",
+    },
+    violet: {
+      tag: "bg-violet-50 text-violet-700 border-violet-100",
+      title: "group-hover:text-violet-600",
+      link: "hover:text-violet-600",
+      border: "hover:border-violet-200",
+    },
+    sky: {
+      tag: "bg-sky-50 text-sky-700 border-sky-100",
+      title: "group-hover:text-sky-600",
+      link: "hover:text-sky-600",
+      border: "hover:border-sky-200",
+    },
+    orange: {
+      tag: "bg-orange-50 text-orange-700 border-orange-100",
+      title: "group-hover:text-orange-600",
+      link: "hover:text-orange-600",
+      border: "hover:border-orange-200",
+    },
+    slate: {
+      tag: "bg-slate-100 text-slate-900 border-slate-200",
+      title: "group-hover:text-slate-600",
+      link: "hover:text-slate-600",
+      border: "hover:border-slate-300",
+    },
+  };
+
+  // 3. Explicitly type the array using the interface
+  const projects: ProjectItem[] = [
     {
       title: "SubletUC",
       description: "A student housing application built for UC students, by UC students. Meant to be portable to any university.",
@@ -10,7 +77,8 @@ export default function Projects() {
       link: "https://www.subletuc.com/",
       github: null,
       photo: "/SUBLETUC_LOGO_FINAL.png", 
-      fit: "contain"
+      fit: "contain",
+      color: "red"
     },
     {
       title: "AgileBoard.ai",
@@ -19,7 +87,8 @@ export default function Projects() {
       link: "https://bug-tracker-2lzlohlc4-chris-taylor7s-projects.vercel.app/",
       github: "https://github.com/Chris-Taylor7/BugTracker",
       photo: "/Agile.png",
-      fit: "contain"
+      fit: "contain",
+      color: "violet"
     },
     {
       title: "Collegiate Esports Network",
@@ -28,7 +97,8 @@ export default function Projects() {
       link: "https://collegiateesportsnetwork.org/",
       github: null,
       photo: "/CEN_Logo.webp",
-      fit: "contain"
+      fit: "contain",
+      color: "blue"
     },
     {
       title: "SubletUC-React",
@@ -37,7 +107,8 @@ export default function Projects() {
       link: "https://sublet-uc-react-git-main-chris-taylor7s-projects.vercel.app/",
       github: "https://github.com/Chris-Taylor7/SubletUC-React",
       photo: "/SUBLETUC_LOGO_FINAL.png", 
-      fit: "contain"
+      fit: "contain",
+      color: "teal"
     },
     {
       title: "CEN Discord Bot",
@@ -46,7 +117,8 @@ export default function Projects() {
       link: null,
       github: "https://github.com/Collegiate-Esports-Network/CEN-Bot",
       photo: "/CEN_Logo.webp",
-      fit: "contain"
+      fit: "contain",
+      color: "indigo"
     },
     {
       title: "Flutter Youtube Directory",
@@ -55,7 +127,8 @@ export default function Projects() {
       link: "https://flutter-youtube-directory-k9bv1wqoz-chris-taylor7s-projects.vercel.app/",
       github: "https://github.com/Chris-Taylor7/Flutter-Youtube-directory",
       photo: "/flutter.png",
-      fit: "cover"
+      fit: "cover",
+      color: "sky"
     },
     {
       title: "Notes-MAUI",
@@ -64,7 +137,8 @@ export default function Projects() {
       link: null,
       github: "https://github.com/Chris-Taylor7/Notes-MAUI",
       photo: "/Maui.webp", 
-      fit: "cover"
+      fit: "cover",
+      color: "violet"
     },
     {
       title: "Login Component",
@@ -73,7 +147,8 @@ export default function Projects() {
       link: null,
       github: "https://github.com/Chris-Taylor7/login",
       photo: "/github-logo.png",
-      fit: "cover"
+      fit: "cover",
+      color: "orange"
     },
     {
       title: "Chris Taylor's Portfolio",
@@ -82,7 +157,8 @@ export default function Projects() {
       link: "https://chris-taylor7.github.io/",
       github: "https://github.com/Chris-Taylor7/Chris-Taylor7.github.io",
       photo: "/github-logo.png",
-      fit: "cover"
+      fit: "cover",
+      color: "slate"
     }
   ];
 
@@ -94,22 +170,57 @@ export default function Projects() {
       </header>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {projects.map((project, index) => (
-          <div
-            key={index}
-            className="group flex flex-col bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-shadow duration-300"
-          >
-            <div className="h-48 bg-white relative border-b border-gray-100">
-              {project.photo ? (
-                <Image 
-                  src={project.photo} 
-                  alt={project.title}
-                  fill
-                  className={` ${project.fit === 'cover' ? 'object-cover' : 'object-contain'}`}
-                />
-              ) : (
-                <div className="h-full w-full flex items-center justify-center text-gray-400">
-                  [Photo coming soon!]
+        {projects.map((project, index) => {
+          // No error now because TypeScript knows project.color is a valid key
+          const theme = colorVariants[project.color];
+
+          return (
+            <div
+              key={index}
+              className={`
+                group flex flex-col bg-white border border-gray-200 rounded-xl overflow-hidden 
+                transition-all duration-300 ease-in-out
+                hover:shadow-xl hover:-translate-y-2 hover:border-transparent ${theme.border}
+              `}
+            >
+              {/* Image Section */}
+              <div className="h-48 bg-gray-50 relative border-b border-gray-100 overflow-hidden">
+                {project.photo ? (
+                  <Image 
+                    src={project.photo} 
+                    alt={project.title}
+                    fill
+                    className={`
+                      ${project.fit === 'cover' ? 'object-cover' : 'object-contain'} 
+                      group-hover:scale-105 transition-transform duration-500
+                    `}
+                  />
+                ) : (
+                  <div className="h-full w-full flex items-center justify-center text-gray-400">
+                    [Photo coming soon!]
+                  </div>
+                )}
+              </div>
+              
+              {/* Content Section */}
+              <div className="p-6 flex flex-col flex-grow">
+                <h3 className={`text-xl font-bold text-gray-900 mb-2 transition-colors ${theme.title}`}>
+                  {project.title}
+                </h3>
+                <p className="text-gray-600 mb-4 flex-grow line-clamp-3">
+                  {project.description}
+                </p>
+                
+                {/* Tags */}
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {project.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className={`px-2.5 py-1 text-xs font-medium rounded-full border ${theme.tag}`}
+                    >
+                      {tag}
+                    </span>
+                  ))}
                 </div>
               )}
             </div>
