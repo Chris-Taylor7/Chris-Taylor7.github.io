@@ -41,9 +41,9 @@ export default function Projects() {
       link: "hover:text-orange-600",
     },
     slate: {
-      tag: "bg-slate-100 text-slate-700 border-slate-200",
-      title: "group-hover:text-slate-700",
-      link: "hover:text-slate-700",
+      tag: "bg-slate-100 text-slate-900 border-slate-200",
+      title: "group-hover:text-slate-600",
+      link: "hover:text-slate-600",
     },
   };
 
