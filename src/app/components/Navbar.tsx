@@ -32,7 +32,7 @@ export default function Navbar() {
                   href={link.href}
                   className={`flex items-center space-x-2 text-sm font-medium transition-colors ${
                     isActive
-                      ? "text-green-800"
+                      ? "text-blue-600"
                       : "text-gray-500 hover:text-gray-900"
                   }`}
                 >
