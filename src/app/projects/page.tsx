@@ -141,7 +141,7 @@ export default function Projects() {
   ];
 
   return (
-    <div className="space-y-8 animate-in fade-in slide-in-from-bottom-6 duration-700">
+    <div className="space-y-8 animate-slide-up">
       <header>
         <h1 className="text-3xl font-bold text-gray-900 mb-2">Projects</h1>
         <p className="text-gray-600">A selection of my recent work.</p>

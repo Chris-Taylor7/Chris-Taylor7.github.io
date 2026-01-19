@@ -40,7 +40,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="flex flex-col justify-center min-h-[80vh] animate-in fade-in slide-in-from-bottom-4 duration-700">
+    <div className="flex flex-col justify-center min-h-[80vh] animate-slide-up">
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         
