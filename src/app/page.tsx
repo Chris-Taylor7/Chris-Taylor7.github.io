@@ -48,7 +48,7 @@ export default function Home() {
         <div className="space-y-6 order-2 md:order-1">
           <h1 className="text-5xl font-extrabold tracking-tight text-gray-900 sm:text-6xl min-h-[80px]">
             {text}
-            <span className="animate-pulse text-blue-600">|</span>
+            <span className="animate-pulse text-green-800">|</span>
           </h1>
           <h1 className="text-3xl font-extrabold tracking-tight text-gray-700 sm:text-4xl min-h-[80px]">Let's build something amazing together.</h1>
           <p className="text-xl text-gray-800 max-w-lg">
@@ -61,14 +61,14 @@ export default function Home() {
             <Link
               href="/resume"
               className="inline-flex items-center justify-center px-5 py-3 text-base font-medium
-                         text-white bg-gray-800 rounded-lg hover:bg-gray-900 transition-colors"
+                         text-white bg-green-700 rounded-lg hover:bg-green-700  transition-colors"
             >
               View My Experience <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
             <Link
               href="/projects"
               className="inline-flex items-center justify-center px-5 py-3 text-base font-medium
-                        text-white bg-gray-600 rounded-lg hover:bg-gray-700 transition-colors"
+                        text-white bg-amber-900 rounded-lg hover:bg-amber-800 transition-colors"
             >
               View My Projects <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
@@ -77,7 +77,7 @@ export default function Home() {
             <a
               href="/Taylor_Chris_Resume_2026.pdf"
               download="Taylor_Chris_Resume.pdf" 
-              className="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-gray-900 bg-white border-2 border-gray-200 rounded-lg hover:bg-gray-50 hover:border-gray-300 transition-colors"
+              className="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-white bg-gray-900 border-2 border-gray-200 rounded-lg hover:bg-gray-800 transition-colors"
             >
               Resume <Download className="ml-2 h-4 w-4" />
             </a>
