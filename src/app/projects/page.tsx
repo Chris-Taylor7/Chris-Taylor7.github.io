@@ -1,53 +1,75 @@
 import Image from "next/image";
 import { ExternalLink, Github } from "lucide-react";
 
+// 1. Define the allowed keys to prevent typos and TS errors
+type ColorKey = 'red' | 'blue' | 'indigo' | 'teal' | 'violet' | 'sky' | 'orange' | 'slate';
+
+interface ProjectItem {
+  title: string;
+  description: string;
+  tags: string[];
+  link: string | null;
+  github: string | null;
+  photo: string;
+  fit: "contain" | "cover";
+  color: ColorKey; // This enforces that color must be one of the keys above
+}
+
 export default function Projects() {
-  // 1. Define color themes to avoid Tailwind class conflicts
-  // and give each project a distinct personality.
-  const colorVariants = {
+  // 2. Add 'border' to the object structure so 'theme.border' works below
+  const colorVariants: Record<ColorKey, { tag: string; title: string; link: string; border: string }> = {
     red: {
       tag: "bg-red-50 text-red-700 border-red-100",
       title: "group-hover:text-red-600",
       link: "hover:text-red-600",
+      border: "hover:border-red-200",
     },
     blue: {
       tag: "bg-blue-50 text-blue-700 border-blue-100",
       title: "group-hover:text-blue-600",
       link: "hover:text-blue-600",
+      border: "hover:border-blue-200",
     },
     indigo: {
       tag: "bg-indigo-50 text-indigo-700 border-indigo-100",
       title: "group-hover:text-indigo-600",
       link: "hover:text-indigo-600",
+      border: "hover:border-indigo-200",
     },
     teal: {
       tag: "bg-teal-50 text-teal-700 border-teal-100",
       title: "group-hover:text-teal-600",
       link: "hover:text-teal-600",
+      border: "hover:border-teal-200",
     },
     violet: {
       tag: "bg-violet-50 text-violet-700 border-violet-100",
       title: "group-hover:text-violet-600",
       link: "hover:text-violet-600",
+      border: "hover:border-violet-200",
     },
     sky: {
       tag: "bg-sky-50 text-sky-700 border-sky-100",
       title: "group-hover:text-sky-600",
       link: "hover:text-sky-600",
+      border: "hover:border-sky-200",
     },
     orange: {
       tag: "bg-orange-50 text-orange-700 border-orange-100",
       title: "group-hover:text-orange-600",
       link: "hover:text-orange-600",
+      border: "hover:border-orange-200",
     },
     slate: {
       tag: "bg-slate-100 text-slate-900 border-slate-200",
       title: "group-hover:text-slate-600",
       link: "hover:text-slate-600",
+      border: "hover:border-slate-300",
     },
   };
 
-  const projects = [
+  // 3. Explicitly type the array using the interface
+  const projects: ProjectItem[] = [
     {
       title: "SubletUC",
       description: "A student housing application built for UC students, by UC students. Meant to be portable to any university.",
@@ -56,7 +78,7 @@ export default function Projects() {
       github: null,
       photo: "/SUBLETUC_LOGO_FINAL.png", 
       fit: "contain",
-      color: "red" // UC is Red/Black
+      color: "red"
     },
     {
       title: "AgileBoard.ai",
@@ -66,7 +88,7 @@ export default function Projects() {
       github: "https://github.com/Chris-Taylor7/BugTracker",
       photo: "/Agile.png",
       fit: "contain",
-      color: "violet" // AI/Modern feel
+      color: "violet"
     },
     {
       title: "Collegiate Esports Network",
@@ -76,7 +98,7 @@ export default function Projects() {
       github: null,
       photo: "/CEN_Logo.webp",
       fit: "contain",
-      color: "blue" // CEN Logo is Blue
+      color: "blue"
     },
     {
       title: "SubletUC-React",
@@ -86,7 +108,7 @@ export default function Projects() {
       github: "https://github.com/Chris-Taylor7/SubletUC-React",
       photo: "/SUBLETUC_LOGO_FINAL.png", 
       fit: "contain",
-      color: "teal" // React is often Teal/Cyan
+      color: "teal"
     },
     {
       title: "CEN Discord Bot",
@@ -96,7 +118,7 @@ export default function Projects() {
       github: "https://github.com/Collegiate-Esports-Network/CEN-Bot",
       photo: "/CEN_Logo.webp",
       fit: "contain",
-      color: "indigo" // Discord is Indigo/Blurple
+      color: "indigo"
     },
     {
       title: "Flutter Youtube Directory",
@@ -106,7 +128,7 @@ export default function Projects() {
       github: "https://github.com/Chris-Taylor7/Flutter-Youtube-directory",
       photo: "/flutter.png",
       fit: "cover",
-      color: "sky" // Flutter is Sky Blue
+      color: "sky"
     },
     {
       title: "Notes-MAUI",
@@ -116,7 +138,7 @@ export default function Projects() {
       github: "https://github.com/Chris-Taylor7/Notes-MAUI",
       photo: "/Maui.webp", 
       fit: "cover",
-      color: "violet" // .NET MAUI uses purple branding
+      color: "violet"
     },
     {
       title: "Login Component",
@@ -126,7 +148,7 @@ export default function Projects() {
       github: "https://github.com/Chris-Taylor7/login",
       photo: "/github-logo.png",
       fit: "cover",
-      color: "orange" // HTML5 is Orange
+      color: "orange"
     },
     {
       title: "Chris Taylor's Portfolio",
@@ -136,7 +158,7 @@ export default function Projects() {
       github: "https://github.com/Chris-Taylor7/Chris-Taylor7.github.io",
       photo: "/github-logo.png",
       fit: "cover",
-      color: "slate" // GitHub/Neutral
+      color: "slate"
     }
   ];
 
@@ -149,8 +171,8 @@ export default function Projects() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {projects.map((project, index) => {
-          // Get the color styles based on the project's assigned color
-          const theme = colorVariants[project.color || 'blue'];
+          // No error now because TypeScript knows project.color is a valid key
+          const theme = colorVariants[project.color];
 
           return (
             <div
