@@ -12,11 +12,10 @@ interface ProjectItem {
   github: string | null;
   photo: string;
   fit: "contain" | "cover";
-  color: ColorKey; // This enforces that color must be one of the keys above
+  color: ColorKey;
 }
 
 export default function Projects() {
-  // 2. Add 'border' to the object structure so 'theme.border' works below
   const colorVariants: Record<ColorKey, { tag: string; title: string; link: string; border: string }> = {
     red: {
       tag: "bg-red-50 text-red-700 border-red-100",
@@ -68,7 +67,6 @@ export default function Projects() {
     },
   };
 
-  // 3. Explicitly type the array using the interface
   const projects: ProjectItem[] = [
     {
       title: "SubletUC",
@@ -163,7 +161,7 @@ export default function Projects() {
   ];
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-8 animate-slide-up">
       <header>
         <h1 className="text-3xl font-bold text-gray-900 mb-2">Projects</h1>
         <p className="text-gray-600">A selection of my recent work.</p>
@@ -171,7 +169,6 @@ export default function Projects() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {projects.map((project, index) => {
-          // No error now because TypeScript knows project.color is a valid key
           const theme = colorVariants[project.color];
 
           return (
@@ -222,53 +219,34 @@ export default function Projects() {
                     </span>
                   ))}
                 </div>
-              )}
-            </div>
-            
-            <div className="p-6 flex flex-col flex-grow">
-              <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
-                {project.title}
-              </h3>
-              <p className="text-gray-600 mb-4 flex-grow">
-                {project.description}
-              </p>
-              
-              <div className="flex flex-wrap gap-2 mb-6">
-                {project.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="px-2 py-1 text-xs font-medium text-blue-700 bg-blue-50 rounded-md"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
 
-              <div className="flex items-center gap-4 mt-auto">
-                {project.link && (
-                  <a
-                    href={project.link} 
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center text-sm font-medium text-gray-900 hover:text-blue-600"
-                  >
-                    <ExternalLink size={16} className="mr-1" /> Live Demo
-                  </a>
-                )}
-                {project.github && (
-                  <a
-                    href={project.github} 
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center text-sm font-medium text-gray-900 hover:text-blue-600"
-                  >
-                    <Github size={16} className="mr-1" /> Source
-                  </a>
-                )}
+                {/* Links */}
+                <div className="flex items-center gap-4 mt-auto">
+                  {project.link && (
+                    <a
+                      href={project.link} 
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`flex items-center text-sm font-semibold text-gray-700 transition-colors ${theme.link}`}
+                    >
+                      <ExternalLink size={16} className="mr-1.5" /> Live Demo
+                    </a>
+                  )}
+                  {project.github && (
+                    <a
+                      href={project.github} 
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`flex items-center text-sm font-semibold text-gray-700 transition-colors ${theme.link}`}
+                    >
+                      <Github size={16} className="mr-1.5" /> Source
+                    </a>
+                  )}
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );
