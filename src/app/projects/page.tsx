@@ -2,51 +2,6 @@ import Image from "next/image";
 import { ExternalLink, Github } from "lucide-react";
 
 export default function Projects() {
-  // 1. Define color themes to avoid Tailwind class conflicts
-  // and give each project a distinct personality.
-  const colorVariants = {
-    red: {
-      tag: "bg-red-50 text-red-700 border-red-100",
-      title: "group-hover:text-red-600",
-      link: "hover:text-red-600",
-    },
-    blue: {
-      tag: "bg-blue-50 text-blue-700 border-blue-100",
-      title: "group-hover:text-blue-600",
-      link: "hover:text-blue-600",
-    },
-    indigo: {
-      tag: "bg-indigo-50 text-indigo-700 border-indigo-100",
-      title: "group-hover:text-indigo-600",
-      link: "hover:text-indigo-600",
-    },
-    teal: {
-      tag: "bg-teal-50 text-teal-700 border-teal-100",
-      title: "group-hover:text-teal-600",
-      link: "hover:text-teal-600",
-    },
-    violet: {
-      tag: "bg-violet-50 text-violet-700 border-violet-100",
-      title: "group-hover:text-violet-600",
-      link: "hover:text-violet-600",
-    },
-    sky: {
-      tag: "bg-sky-50 text-sky-700 border-sky-100",
-      title: "group-hover:text-sky-600",
-      link: "hover:text-sky-600",
-    },
-    orange: {
-      tag: "bg-orange-50 text-orange-700 border-orange-100",
-      title: "group-hover:text-orange-600",
-      link: "hover:text-orange-600",
-    },
-    slate: {
-      tag: "bg-slate-100 text-slate-900 border-slate-200",
-      title: "group-hover:text-slate-600",
-      link: "hover:text-slate-600",
-    },
-  };
-
   const projects = [
     {
       title: "SubletUC",
@@ -55,8 +10,7 @@ export default function Projects() {
       link: "https://www.subletuc.com/",
       github: null,
       photo: "/SUBLETUC_LOGO_FINAL.png", 
-      fit: "contain",
-      color: "red" // UC is Red/Black
+      fit: "contain"
     },
     {
       title: "AgileBoard.ai",
@@ -65,8 +19,7 @@ export default function Projects() {
       link: "https://bug-tracker-2lzlohlc4-chris-taylor7s-projects.vercel.app/",
       github: "https://github.com/Chris-Taylor7/BugTracker",
       photo: "/Agile.png",
-      fit: "contain",
-      color: "violet" // AI/Modern feel
+      fit: "contain"
     },
     {
       title: "Collegiate Esports Network",
@@ -75,8 +28,7 @@ export default function Projects() {
       link: "https://collegiateesportsnetwork.org/",
       github: null,
       photo: "/CEN_Logo.webp",
-      fit: "contain",
-      color: "blue" // CEN Logo is Blue
+      fit: "contain"
     },
     {
       title: "SubletUC-React",
@@ -85,8 +37,7 @@ export default function Projects() {
       link: "https://sublet-uc-react-git-main-chris-taylor7s-projects.vercel.app/",
       github: "https://github.com/Chris-Taylor7/SubletUC-React",
       photo: "/SUBLETUC_LOGO_FINAL.png", 
-      fit: "contain",
-      color: "teal" // React is often Teal/Cyan
+      fit: "contain"
     },
     {
       title: "CEN Discord Bot",
@@ -95,8 +46,7 @@ export default function Projects() {
       link: null,
       github: "https://github.com/Collegiate-Esports-Network/CEN-Bot",
       photo: "/CEN_Logo.webp",
-      fit: "contain",
-      color: "indigo" // Discord is Indigo/Blurple
+      fit: "contain"
     },
     {
       title: "Flutter Youtube Directory",
@@ -105,8 +55,7 @@ export default function Projects() {
       link: "https://flutter-youtube-directory-k9bv1wqoz-chris-taylor7s-projects.vercel.app/",
       github: "https://github.com/Chris-Taylor7/Flutter-Youtube-directory",
       photo: "/flutter.png",
-      fit: "cover",
-      color: "sky" // Flutter is Sky Blue
+      fit: "cover"
     },
     {
       title: "Notes-MAUI",
@@ -115,8 +64,7 @@ export default function Projects() {
       link: null,
       github: "https://github.com/Chris-Taylor7/Notes-MAUI",
       photo: "/Maui.webp", 
-      fit: "cover",
-      color: "violet" // .NET MAUI uses purple branding
+      fit: "cover"
     },
     {
       title: "Login Component",
@@ -125,8 +73,7 @@ export default function Projects() {
       link: null,
       github: "https://github.com/Chris-Taylor7/login",
       photo: "/github-logo.png",
-      fit: "cover",
-      color: "orange" // HTML5 is Orange
+      fit: "cover"
     },
     {
       title: "Chris Taylor's Portfolio",
@@ -135,99 +82,82 @@ export default function Projects() {
       link: "https://chris-taylor7.github.io/",
       github: "https://github.com/Chris-Taylor7/Chris-Taylor7.github.io",
       photo: "/github-logo.png",
-      fit: "cover",
-      color: "slate" // GitHub/Neutral
+      fit: "cover"
     }
   ];
 
   return (
-    <div className="space-y-8 animate-slide-up">
+    <div className="space-y-8">
       <header>
         <h1 className="text-3xl font-bold text-gray-900 mb-2">Projects</h1>
         <p className="text-gray-600">A selection of my recent work.</p>
       </header>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {projects.map((project, index) => {
-          // Get the color styles based on the project's assigned color
-          const theme = colorVariants[project.color || 'blue'];
+        {projects.map((project, index) => (
+          <div
+            key={index}
+            className="group flex flex-col bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-shadow duration-300"
+          >
+            <div className="h-48 bg-white relative border-b border-gray-100">
+              {project.photo ? (
+                <Image 
+                  src={project.photo} 
+                  alt={project.title}
+                  fill
+                  className={` ${project.fit === 'cover' ? 'object-cover' : 'object-contain'}`}
+                />
+              ) : (
+                <div className="h-full w-full flex items-center justify-center text-gray-400">
+                  [Photo coming soon!]
+                </div>
+              )}
+            </div>
+            
+            <div className="p-6 flex flex-col flex-grow">
+              <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                {project.title}
+              </h3>
+              <p className="text-gray-600 mb-4 flex-grow">
+                {project.description}
+              </p>
+              
+              <div className="flex flex-wrap gap-2 mb-6">
+                {project.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="px-2 py-1 text-xs font-medium text-blue-700 bg-blue-50 rounded-md"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
 
-          return (
-            <div
-              key={index}
-              className={`
-                group flex flex-col bg-white border border-gray-200 rounded-xl overflow-hidden 
-                transition-all duration-300 ease-in-out
-                hover:shadow-xl hover:-translate-y-2 hover:border-transparent ${theme.border}
-              `}
-            >
-              {/* Image Section */}
-              <div className="h-48 bg-gray-50 relative border-b border-gray-100 overflow-hidden">
-                {project.photo ? (
-                  <Image 
-                    src={project.photo} 
-                    alt={project.title}
-                    fill
-                    className={`
-                      ${project.fit === 'cover' ? 'object-cover' : 'object-contain'} 
-                      group-hover:scale-105 transition-transform duration-500
-                    `}
-                  />
-                ) : (
-                  <div className="h-full w-full flex items-center justify-center text-gray-400">
-                    [Photo coming soon!]
-                  </div>
+              <div className="flex items-center gap-4 mt-auto">
+                {project.link && (
+                  <a
+                    href={project.link} 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center text-sm font-medium text-gray-900 hover:text-blue-600"
+                  >
+                    <ExternalLink size={16} className="mr-1" /> Live Demo
+                  </a>
+                )}
+                {project.github && (
+                  <a
+                    href={project.github} 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center text-sm font-medium text-gray-900 hover:text-blue-600"
+                  >
+                    <Github size={16} className="mr-1" /> Source
+                  </a>
                 )}
               </div>
-              
-              {/* Content Section */}
-              <div className="p-6 flex flex-col flex-grow">
-                <h3 className={`text-xl font-bold text-gray-900 mb-2 transition-colors ${theme.title}`}>
-                  {project.title}
-                </h3>
-                <p className="text-gray-600 mb-4 flex-grow line-clamp-3">
-                  {project.description}
-                </p>
-                
-                {/* Tags */}
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {project.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className={`px-2.5 py-1 text-xs font-medium rounded-full border ${theme.tag}`}
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-
-                {/* Links */}
-                <div className="flex items-center gap-4 mt-auto">
-                  {project.link && (
-                    <a
-                      href={project.link} 
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={`flex items-center text-sm font-semibold text-gray-700 transition-colors ${theme.link}`}
-                    >
-                      <ExternalLink size={16} className="mr-1.5" /> Live Demo
-                    </a>
-                  )}
-                  {project.github && (
-                    <a
-                      href={project.github} 
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={`flex items-center text-sm font-semibold text-gray-700 transition-colors ${theme.link}`}
-                    >
-                      <Github size={16} className="mr-1.5" /> Source
-                    </a>
-                  )}
-                </div>
-              </div>
             </div>
-          );
-        })}
+          </div>
+        ))}
       </div>
     </div>
   );
