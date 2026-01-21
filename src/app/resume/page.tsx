@@ -105,7 +105,7 @@ const EDUCATION_DATA: EducationItem[] = [
     borderColor: "border-red-600"
   },
   {
-    degree: "Bachelor of Information Technology - Networking Systems",
+    degree: "Bachelor of Science in Information Technology - Networking Systems",
     school: "University of Cincinnati",
     date: "August 2021 - May 2026",
     borderColor: "border-red-600"
