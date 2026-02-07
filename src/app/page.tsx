@@ -75,8 +75,8 @@ export default function Home() {
 
             {/* 2. NEW RESUME BUTTON */}
             <a
-              href="/Taylor_Chris_Resume_2026.pdf"
-              download="Taylor_Chris_Resume.pdf" 
+              href="/Taylor_Chris_Resume-CyberIT.pdf"
+              download="Taylor_Chris_Resume-CyberIT.pdf" 
               className="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-white bg-gray-900 border-2 border-gray-200 rounded-lg hover:bg-gray-800 transition-colors"
             >
               Resume <Download className="ml-2 h-4 w-4" />
