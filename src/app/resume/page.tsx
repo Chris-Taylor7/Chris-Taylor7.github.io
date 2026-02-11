@@ -54,7 +54,8 @@ const EXPERIENCE_DATA: ExperienceItem[] = [
     icon: Code,
     colors: { timelineBg: "bg-green-700", roleText: "text-green-700", bulletIcon: "text-green-700" },
     points: [
-      "Developed scalable full-stack applications for internal stakeholders using TypeScript, C# .NET, and SQL databases.",
+      "Developed scalable full-stack applications for internal stakeholders using Angular.js, TypeScript, C# .NET, and SQL databases.",
+      "Utilized DevOps practices to ensure a clear CI/CD pipeline from development to production.", 
       "Collaborated directly with end-users to gather requirements and deliver custom solutions tailored to specific business needs.",
       "Streamlined organization-wide communication channels by digitizing and optimizing business-to-customer workflows."
     ]
