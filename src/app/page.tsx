@@ -3,6 +3,10 @@
 import Link from "next/link";
 import { ArrowRight, Github, Instagram, Linkedin, Mail, Download } from "lucide-react";
 import { useEffect, useState } from "react";
+import '@fortawesome/fontawesome-svg-core/styles.css';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDiscord } from '@fortawesome/free-brands-svg-icons';
 
 export default function Home() {
   const [text, setText] = useState("");
@@ -113,11 +117,13 @@ export default function Home() {
                 <Instagram size={24} />
               </a>
               <a 
-                href="https://www.discord.com/465965656270045184" target="_blank"
+                href="https://www.discord.com/users/465965656270045184" target="_blank"
                 className="p-3 text-gray-500 hover:text-blue-300 transition-colors"
               >
-                {/* Note: FontAwesome needs to be loaded separately, or use a Lucide icon if preferred */}
-                <i className="fas fa-discord fa-sm text-gray-500 hover:text-blue-300 transition-colors "></i>
+                <FontAwesomeIcon 
+                  icon={faDiscord} 
+                  className="text-gray-500 hover:text-blue-300 transition-colors" 
+                />
               </a>
             </div>
           </div>
