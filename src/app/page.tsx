@@ -72,7 +72,7 @@ export default function Home() {
             <Link
               href="/projects"
               className="inline-flex items-center justify-center px-5 py-3 text-base font-medium
-                        text-white bg-amber-900 rounded-lg hover:bg-amber-800 transition-colors"
+                        text-white bg-brown rounded-lg hover:bg-brown-hover transition-colors"
             >
               View My Projects <ArrowRight className="ml-2 h-4 w-4" />
             </Link>

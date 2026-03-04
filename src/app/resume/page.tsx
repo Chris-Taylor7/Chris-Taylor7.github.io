@@ -36,15 +36,16 @@ interface EducationItem {
 const EXPERIENCE_DATA: ExperienceItem[] = [
   {
     company: "Lincoln Electric",
-    role: "Cybersecurity Analyst Co-op",
+    role: "Application Security Analyst Co-op", // Updated from Cybersecurity Analyst to match resume
     date: "May 2025 - August 2025",
     icon: Shield,
     colors: { timelineBg: "bg-red-600", roleText: "text-red-600", bulletIcon: "text-red-600" },
     points: [
-      "Operationalized non-functional security requirements across development teams by implementing CISA secure-by-design practices at the policy and procedure level.",
-      "Integrated SAST and SCA tools into developer workflows and effectively communicated security metrics to non-technical stakeholders.",
-      "Leveraged Rapid7 Insight AppSec to increase vulnerability identification by 780% across the organization.",
-      "Spearheaded an AI-driven initiative to capture institutional knowledge, significantly improving organizational workflows and productivity."
+      "Drove secure-by-design adoption across development teams per CISA standards, reducing security gaps and implementing policy-level procedures.",
+      "Integrated SAST and SCA tools into developer workflows to speed up remediation and align security metrics with business impact.",
+      "Scaled Rapid7 Insight AppSec scanning candidates by 780% (7.8x) and communicated coverage analysis directly to C-suite management.",
+      "Investigated Java detection tools to migrate Oracle instances to OpenJDK, successfully reducing licensing costs.",
+      "Spearheaded an AI-driven initiative to capture institutional knowledge, improving cross-team communication and productivity."
     ]
   },
   {
@@ -54,34 +55,35 @@ const EXPERIENCE_DATA: ExperienceItem[] = [
     icon: Code,
     colors: { timelineBg: "bg-green-700", roleText: "text-green-700", bulletIcon: "text-green-700" },
     points: [
-      "Developed scalable full-stack applications for internal stakeholders using Angular.js, TypeScript, C# .NET, and SQL databases.",
-      "Utilized DevOps practices to ensure a clear CI/CD pipeline from development to production.", 
-      "Collaborated directly with end-users to gather requirements and deliver custom solutions tailored to specific business needs.",
-      "Streamlined organization-wide communication channels by digitizing and optimizing business-to-customer workflows."
+      "Led full-stack feature creation for scalable internal applications using Angular.js, TypeScript, and C# .NET.",
+      "Leveraged Microsoft Azure and Jenkins to streamline DevOps processes and ensure a robust CI/CD pipeline.", 
+      "Collaborated directly with engineering teams and internal customers to gather requirements and deliver custom in-house solutions.",
+      "Optimized business workflows by digitizing communication channels and developing user-centric software tools."
     ]
   },
   {
     company: "Midmark Corporation",
-    role: "Software Developer Co-op",
+    role: "Full Stack Software Engineering Co-op", // Updated from Software Developer to match resume
     date: "May 2023 - August 2023",
     icon: Cpu,
     colors: { timelineBg: "bg-cyan-600", roleText: "text-cyan-600", bulletIcon: "text-cyan-600" },
     points: [
-      "Engineered software solutions for a digital platform serving customers, dealers, and technicians.",
-      "Collaborated within a 15-person agile team to deliver high-quality features in two-week sprints.",
-      "Maintained and enhanced the customer portal using microfrontend architecture in React.js."
+      "Engineered cloud platform solutions using React.js and C# .NET within a microfrontend architecture.",
+      "Utilized Azure DevOps to implement End-to-End (E2E) testing pipelines and the Jest framework for unit testing.",
+      "Collaborated within an Agile/SCRUM environment to maximize team communication and deliver value-first features to customers."
     ]
   },
   {
     company: "Midmark Corporation",
-    role: "Cybersecurity Engineering Co-op",
+    role: "Application Security Co-op", // Updated from Cybersecurity Engineering to match resume
     date: "August 2022 - December 2022",
     icon: Shield,
     colors: { timelineBg: "bg-cyan-600", roleText: "text-cyan-600", bulletIcon: "text-cyan-600" },
     points: [
-      "Automated code coverage and API scanning tools, enabling seamless integration into developer sprint cycles.",
-      "Implemented agent-based SCA scanning within CI/CD pipelines to streamline user story creation and accelerate code remediation.",
-      "Mitigated potential security threats to protect internal and external personnel and company assets."
+      "Implemented automated code scanning and agent-based SCA tools (Veracode, Rapid7) across four software development teams.",
+      "Streamlined deployment processes using Azure DevOps pipelines to accelerate vulnerability remediation.",
+      "Developed comprehensive PowerBI reports to present security metrics to management.",
+      "Authored technical documentation for application security testing vendors to standardize implementation."
     ]
   },
   {
