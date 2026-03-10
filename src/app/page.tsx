@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, Github, Instagram, Linkedin, Mail, Download } from "lucide-react";
+import { ArrowRight, Github, Instagram, Linkedin, Mail, Download, Phone } from "lucide-react";
 import { useEffect, useState } from "react";
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -109,6 +109,12 @@ export default function Home() {
                 className="p-3 text-gray-500 hover:text-red-500 transition-colors"
               >
                 <Mail size={24} />
+              </a>
+              <a 
+                href="tel:+442071234567"
+                className="p-3 text-gray-500 hover:text-green-500 transition-colors"
+                >
+                <Phone size={24}  />
               </a>
               <a 
                 href="https://www.instagram.com/christaylorisapunk/" target="_blank"
