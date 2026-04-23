@@ -53,7 +53,7 @@ export const projects: ProjectItem[] = [
     },
     {
       title: "Tickets R Us",
-      description: "A ticketing application that uses a custom-built AI to help prioritize tickets, built using NEXT.js, Tailwindcss, and Prisma with a PostgreSQL database. Development in Progress!",
+      description: "A ticketing application that uses a custom-built API to help prioritize tickets, built using NEXT.js, Tailwindcss, and Prisma with a PostgreSQL database. Development in Progress!",
       tags: ["NEXT.js", "Tailwindcss", "Netlify", "Prisma", "PostgreSQL"],
       link: "https://ticketsrus.netlify.app/",
       github: "https://github.com/Chris-Taylor7/tickets-r-us",
