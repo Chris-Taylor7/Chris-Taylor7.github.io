@@ -1,4 +1,4 @@
-type ColorKey = 'red' | 'blue' | 'indigo' | 'teal' | 'violet' | 'sky' | 'orange' | 'slate';
+type ColorKey = 'red' | 'blue' | 'indigo' | 'teal' | 'violet' | 'sky' | 'orange' | 'slate' | 'green' | 'pink' | 'yellow';
 
 export const colorVariants: Record<ColorKey, { tag: string; title: string; link: string; border: string }> = {
     red: {
@@ -48,5 +48,23 @@ export const colorVariants: Record<ColorKey, { tag: string; title: string; link:
       title: "group-hover:text-slate-600",
       link: "hover:text-slate-600",
       border: "hover:border-slate-300",
+    },
+    green: {
+      tag: "bg-green-50 text-green-700 border-green-100",
+      title: "group-hover:text-green-600",
+      link: "hover:text-green-600",
+      border: "hover:border-green-200",
+    },
+    pink: {
+      tag: "bg-pink-50 text-pink-700 border-pink-100",
+      title: "group-hover:text-pink-600",
+      link: "hover:text-pink-600",
+      border: "hover:border-pink-200",  
+    },
+    yellow: {
+      tag: "bg-yellow-50 text-yellow-700 border-yellow-100",
+      title: "group-hover:text-yellow-600", 
+      link: "hover:text-yellow-600",
+      border: "hover:border-yellow-200",
     },
   };

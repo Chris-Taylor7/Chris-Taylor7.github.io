@@ -1,4 +1,4 @@
-type ColorKey = 'red' | 'blue' | 'indigo' | 'teal' | 'violet' | 'sky' | 'orange' | 'slate';
+type ColorKey = 'red' | 'blue' | 'indigo' | 'teal' | 'violet' | 'sky' | 'orange' | 'slate' | 'green' | 'pink' | 'yellow';
 
 export default interface ProjectItem {
   title: string;

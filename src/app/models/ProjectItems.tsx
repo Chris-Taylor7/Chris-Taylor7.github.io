@@ -13,7 +13,7 @@ export const projects: ProjectItem[] = [
     },
     {
       title: "AgileBoard.ai",
-      description: "A bug tracking app that helps prioritizes tasks, enabled using the Google Gemini AI API.",
+      description: "A bug tracking app that helps prioritizes tasks, enabled using the Google Gemini AI API. Development in Progress!",
       tags: ["Angular.js", "Tailwindcss", "Vercel", "TypeScript", "Prisma"],
       link: "https://bug-tracker-2lzlohlc4-chris-taylor7s-projects.vercel.app/",
       github: "https://github.com/Chris-Taylor7/BugTracker",
@@ -50,6 +50,36 @@ export const projects: ProjectItem[] = [
       photo: "/CEN_Logo.webp",
       fit: "contain",
       color: "indigo"
+    },
+    {
+      title: "Tickets R Us",
+      description: "A ticketing application that uses a custom-built AI to help prioritize tickets, built using NEXT.js, Tailwindcss, and Prisma with a PostgreSQL database. Development in Progress!",
+      tags: ["NEXT.js", "Tailwindcss", "Netlify", "Prisma", "PostgreSQL"],
+      link: "https://ticketsrus.netlify.app/",
+      github: "https://github.com/Chris-Taylor7/tickets-r-us",
+      photo: "/ticket.jpg",
+      fit: "contain",
+      color: "green"
+    },
+    {
+      title: "Wedding Planner App",
+      description: "I built this app for my wife to help plan our wedding. It uses NEXT.js, Tailwindcss, and DaisyUI to help create, edit, and sort a timeline of events.",
+      tags: ["NEXT.js", "Tailwindcss", "DaisyUI", "Netlify"],
+      link: "https://wedding-plan-timeline.netlify.app/",
+      github: "https://github.com/Chris-Taylor7/wedding-timeline",
+      photo: "/wedding.png",
+      fit: "contain",
+      color: "pink"
+    },
+    {
+      title: "Helldivers 2 Dashboard",
+      description: "This Angular concept project is a dashboard for the game Helldivers 2, utilizing the game's API to display player stats, mission details, and leaderboards. Built with Angular and Tailwindcss, it lets players track game progress in real time!",
+      tags: ["Angular", "Tailwindcss", "Netlify", "REST API"],
+      link: "",
+      github: "https://github.com/Chris-Taylor7/helldivers-dashboard",
+      photo: "/helldivers.png",
+      fit: "contain",
+      color: "yellow"
     },
     {
       title: "Flutter Youtube Directory",
