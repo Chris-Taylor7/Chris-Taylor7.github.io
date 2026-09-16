@@ -13,10 +13,10 @@ export const projects: ProjectItem[] = [
     },
     {
       title: "SubletUC",
-      description: "A student housing application built for UC students, by UC students. Meant to be portable to any university.",
+      description: "A student housing application built for UC students, by UC students. Meant to be portable to any university. May be deactivated in the future due to lack of funding and support. Built using Razor Blazor, .NET Framework, SQL Server, and HTML/CSS.",
       tags: ["Razor Blazor", ".NET Framework", "HTML/CSS", "SQL Server"],
       link: "https://www.subletuc.com/",
-      github: "https://github.com/PaytonSchult/SubletUC",
+      github: "https://github.com/Chris-Taylor7/SubletUC",
       photo: "/SUBLETUC_LOGO_FINAL.png", 
       fit: "contain",
       color: "red"
